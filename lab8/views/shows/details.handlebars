@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{show.name}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/public/main_styles.css">
+    </head>
+    <body>
+        <article>
+            <h1>{{show.name}}</h1>
+            {{#if show.image.medium}}
+                    <img src={{show.image.medium}} alt= {{show.name}}> 
+            {{else}}
+                    <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg"> 
+            {{/if}}
+            
+            <dl>
+                <dt>Language</dt>
+                {{#if show.language}}
+                    <dd>{{show.language}}</dd>
+                {{else}}
+                    <dd>N/A</dd>
+                {{/if}}
+                
+                <dt>Genres</dt>
+                {{#if show.genres}}
+                    <dd>
+                        <ul>
+                            {{#each show.genres}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </dd>
+                {{else}}
+                    <dd>N/A</dd>
+                {{/if}}
+                
+
+                <dt>Average Rating</dt>
+                {{#if show.rating.average}}
+                    <dd>{{show.rating.average}}</dd>
+                {{else}}
+                    <dd>N/A</dd>
+                {{/if}}
+
+                <dt>Network</dt>
+                {{#if show.network.name}}
+                    <dd>{{show.network.name}}</dd>
+                {{else}}
+                    <dd>N/A</dd>
+                {{/if}}
+                
+
+                <dt>Summary</dt>
+                <dd>{{summary}}</dd>
+
+            </dl>
+            <a href ='/'>Make another search</a>
+        </article>
+    </body>
+ </html> 
