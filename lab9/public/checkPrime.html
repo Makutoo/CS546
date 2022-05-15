@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Prime Number</title>
+    
+    <link rel="stylesheet" href="public/site.css">
+</head>
+<body>
+    <header>
+        <h1>Prime Number Checker</h1>
+        <p>This site can help you check your input number is a prime number or not</p>
+    </header>
+    <form id= "checkPrime" class="form">
+        <label for="number"> Enter the Number here: </label>
+        <input type = "number" name = "value" id = "number" placeholder="Enter Your Number Here" required oninvalid="this.setCustomValidity('You must enter a integer number to check')" oninput="this.setCustomValidity('')">
+        <button type="submit" class="btn">Sumbit</button>
+    </form>  
+    <ol id="attempts" class="list"></ol>
+    <footer>
+        <h1>Ziheng Zhu 10474431</h1>
+        <p>This is my lab 9</p>
+    </footer>
+    
+    <script src="public/checkPrime.js"></script>
+</body>
+</html>
